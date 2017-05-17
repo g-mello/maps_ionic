@@ -84,14 +84,21 @@ angular.module('starter', ['ionic', 'ngCordova'])
 
 google.maps.event.addListenerOnce($scope.map, 'idle', function(){
 
- var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+ var image = 'https://scontent.frao1-1.fna.fbcdn.net/v/t34.0-12/18601423_1342085115879471_1359342496_n.png?oh=1a6c766da8897c7bdec856de0cea0100&oe=591F169F';
 
  var marca1 = new google.maps.Marker({
       map: $scope.map,
       animation: google.maps.Animation.DROP,
       position: pontoUsuario,
       label: "Estou aqui",
-      icon:image
+      icon: {
+		      path: SQUARE_PIN,
+		        fillColor: '#00CCBB',
+		          fillOpacity: 1,
+		            strokeColor: '',
+		              strokeWeight: 0
+	               },
+	     map_icon_label: '<span class="map-icon map-icon-point-of-interest"></span>'
   });
 
 
@@ -100,14 +107,7 @@ google.maps.event.addListenerOnce($scope.map, 'idle', function(){
       animation: google.maps.Animation.DROP,
       position: ponto2,
       label: "Pub Zé Brasil",
-      icon: {
-		      path: SQUARE_PIN,
-		        fillColor: '#00CCBB',
-		          fillOpacity: 1,
-		            strokeColor: '',
-		              strokeWeight: 0
-	               },
-	     map_icon_label: '<span class="map-icon map-icon-night-club"></span>'
+      icon: image
   });
 
    var marca3 = new google.maps.Marker({
