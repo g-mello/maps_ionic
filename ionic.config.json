@@ -1,6 +1,6 @@
 {
   "name": "ionic-maps",
-  "app_id": "",
+  "integrations": {},
   "gulpStartupTasks": [
     "sass",
     "watch"
@@ -9,5 +9,6 @@
     "www/**/*",
     "!www/lib/**/*",
     "!www/**/*.map"
-  ]
+  ],
+  "type": "ionic1"
 }
